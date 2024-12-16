@@ -41,6 +41,11 @@ namespace ConsoleApp1
             {
                 Console.Write("{0}:{1}  ", drivers[i].driverName, drivers[i].ranking);
             }
+            for(int i = 0;i < drivers.Count;i++)
+            {
+                drivers[i].qualifications = true;
+                drivers[i].type = "Dry tires";
+            }
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();

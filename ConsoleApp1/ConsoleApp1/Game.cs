@@ -34,14 +34,12 @@ namespace ConsoleApp1
             {
                 drivers[i].sumTime = venue.vace + 10;
             }
+            int jude = 0;//判断是否下雨
+            Rain rain = new Rain();//模拟下雨
             while (n <= venue.lapCount)//比完全部圈
             {
-                Console.WriteLine("The {0} round of the competition has officially begun:",n);
-                if(n==2)
-                {
-                    Rain rain = new Rain();
-                    rain.Rainprobility(drivers,venue.rainProbability);
-                }
+                Console.WriteLine("The {0} round of the competition has officially begun:",n);                
+                rain.Rainprobility(n,ref jude,drivers,venue.rainProbability);
                 for(int i = 0;i<drivers.Count;i++)
                 {
                     drivers[i].sumTime = factor1.factor(drivers[i].sumTime, n, drivers[i], venue);
