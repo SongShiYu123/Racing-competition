@@ -49,6 +49,10 @@ namespace ConsoleApp1
                 Sort sort = new Sort();
                 sort.Sort1(drivers);
                 Console.WriteLine();
+                for (int i = 0; i < drivers.Count; i++)
+                {
+                    Console.WriteLine("The time used by {0} is {1}", drivers[i].driverName, drivers[i].sumTime);
+                }
                 Console.WriteLine("The name of the leading driver in the {0} round is {1},time is {2}", n,drivers[0].driverName, drivers[0].sumTime);
                 Console.WriteLine("----------------------------");
                 for (int i = 0; i < drivers.Count; i++)
